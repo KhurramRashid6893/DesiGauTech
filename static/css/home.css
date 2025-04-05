@@ -1,0 +1,46 @@
+/* Additional Styling for Home Page */
+.home-intro {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 18px;
+    background: #FFE4C4;
+}
+
+.home-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #6A3B12;
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #FFD700;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    color: #4A340D;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: #4A340D;
+}
+
+.cta-section .cta-button {
+    background: #A0522D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-section .cta-button:hover {
+    background: #8B4513;
+}

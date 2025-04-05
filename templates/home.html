@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - DesiGauTech{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h2>Reviving Indian Cow Breeds for a Sustainable Future</h2>
+        <p>Empowering farmers with AI-driven solutions, traditional wisdom, and sustainability practices.</p>
+        <a href="#" class="cta-button">Join the Movement</a>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Our Key Features</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/ai_cattle.png') }}" alt="AI Cattle Solutions">
+            <h3>AI-Powered Cattle Solutions</h3>
+            <p>Smart disease prediction, breed selection, and milk quality analysis.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/dairy_farming.png') }}" alt="Dairy & Sustainable Farming">
+            <h3>Smart Dairy & Sustainable Farming</h3>
+            <p>Eco-friendly grazing, biogas production, and organic product hub.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/veterinary.png') }}" alt="Veterinary Services">
+            <h3>Digital Veterinary Services</h3>
+            <p>Telemedicine, climate-resilient breeding, and insurance assistance.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/community.png') }}" alt="Farmer Community">
+            <h3>Farmer Hub & Skill Development</h3>
+            <p>Training, AI-based guidance, market connections, and sustainability tools.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

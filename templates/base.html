@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DesiGauTech{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DesiGauTech Logo">
+            <h1>DesiGauTech</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="#">AI Cattle Solutions</a></li>
+                <li><a href="#">Dairy & Farming</a></li>
+                <li><a href="#">Veterinary</a></li>
+                <li><a href="#">Farmer Hub</a></li>
+                <li><a href="#">Blockchain</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Government</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Block -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 DesiGauTech | Reviving Indian Cow Breeds for a Sustainable Future</p>
+    </footer>
+</body>
+</html>
