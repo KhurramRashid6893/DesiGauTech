@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+import google.generativeai as genai
 
 app = Flask(__name__)
 
@@ -8,9 +9,15 @@ def home():
     return render_template("home.html")
 
 # AI-Powered Cattle Solutions Route
-@app.route("/ai-cattle")
+genai.configure(api_key="AIzaSyD7yvvskWyuzMypw9AyaGQ1BF54yNjIgl4")
+model = genai.GenerativeModel("gemini-2.0-flash")
+
+@app.route('/ai_cattle', methods=['GET'])
 def ai_cattle():
-    return render_template("ai_cattle.html")
+    # Use Gemini to explain AI's role
+    response = model.generate_content("Explain how AI helps in modern cattle farming in simple terms.")
+    ai_explanation = response.text.replace('\n', '<br>')  # Rendered safely with HTML line breaks
+    return render_template('ai_cattle.html', ai_explanation=ai_explanation)
 
 # Smart Dairy & Sustainable Farming Route
 @app.route("/dairy-farming")
@@ -54,5 +61,3 @@ def contact():
 
 if __name__ == "__main__":
     app.run(debug=True)
-# if 'render' in os.environ.get('SERVER_SOFTWARE', '').lower():
-#     app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
