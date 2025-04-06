@@ -1,0 +1,41 @@
+/* Smart Dairy & Sustainable Farming Page */
+.dairy-features {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 60px;
+    background-color: #F5F5DC;
+}
+
+.dairy-feature {
+    background-color: #FFF8E7;
+    padding: 25px;
+    border-left: 6px solid #A0522D;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+}
+
+.dairy-feature h3 {
+    font-size: 22px;
+    color: #5C3A21;
+    margin-bottom: 10px;
+}
+
+.dairy-feature p {
+    font-size: 16px;
+    color: #3B2612;
+}
+
+.dairy-feature .cta-button {
+    margin-top: 10px;
+    background-color: #A0522D;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.dairy-feature .cta-button:hover {
+    background-color: #8B4513;
+}
