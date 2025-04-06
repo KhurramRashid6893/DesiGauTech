@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Cattle Solutions - DesiGauTech{% endblock %}
+
+{% block content %}
+<section class="section-title">
+    <h2>AI-Powered Cattle Solutions</h2>
+    <p>Harnessing artificial intelligence to revolutionize cattle care and breeding.</p>
+</section>
+
+<section class="ai-features">
+    <div class="ai-feature">
+        <h3>🐮 AI-Powered Disease Prediction</h3>
+        <p>Early detection of cow diseases using real-time data and AI models to enable proactive treatment and reduce mortality rates.</p>
+    </div>
+
+    <div class="ai-feature">
+        <h3>🥛 AI-Enabled Milk Quality Analyzer</h3>
+        <p>Upload milk test reports or integrate with IoT sensors to analyze purity, fat content, and contaminants instantly using AI.</p>
+        <form method="post" enctype="multipart/form-data" action="/analyze_milk">
+            <label for="milk_report">Upload Milk Report (PDF/Image):</label>
+            <input type="file" name="milk_report" accept=".pdf,.png,.jpg,.jpeg" required>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+
+    <div class="ai-feature">
+        <h3>🌾 Breed Selector AI</h3>
+        <p>Discover the most suitable indigenous cow breed for your region and climate.</p>
+        <form method="post" action="/recommend_breed">
+            <label for="region">Enter Your Region:</label>
+            <input type="text" name="region" required>
+            <button type="submit">Recommend</button>
+        </form>
+    </div>
+
+    <div class="ai-feature">
+        <h3>📊 AI-Driven Breed Improvement</h3>
+        <p>Optimize breeding programs to enhance genetic diversity, milk yield, and adaptability through data-driven insights.</p>
+    </div>
+</section>
+
+<section class="ai-info">
+    <h3>💡 How Does AI Help?</h3>
+    <div class="ai-explanation">
+        {{ ai_explanation | safe }}
+    </div>
+</section>
+{% endblock %}
