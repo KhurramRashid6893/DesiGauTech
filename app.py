@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 app = Flask(__name__)
 
-# Home Route
+# Home Route 
 @app.route("/")
 def home():
     return render_template("home.html")
