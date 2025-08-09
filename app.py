@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("home.html")
-
+ 
 # AI-Powered Cattle Solutions Route
 genai.configure(api_key="AIzaSyD7yvvskWyuzMypw9AyaGQ1BF54yNjIgl4")
 model = genai.GenerativeModel("gemini-2.0-flash")
