@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for
 import google.generativeai as genai
 
 app = Flask(__name__)
-
+ 
 # Home Route 
 @app.route("/")
 def home():
